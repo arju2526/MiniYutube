@@ -5,34 +5,16 @@
     "../../tsconfig.paths.json"
   ],
   "include": [
-    "../../packages/babel-core/src/**/*.ts",
+    "../../packages/babel-types/src/**/*.ts",
     "../../lib/globals.d.ts",
     "../../scripts/repo-utils/*.d.ts"
   ],
   "references": [
     {
-      "path": "../../packages/babel-code-frame"
+      "path": "../../packages/babel-helper-string-parser"
     },
     {
-      "path": "../../packages/babel-generator"
-    },
-    {
-      "path": "../../packages/babel-helper-compilation-targets"
-    },
-    {
-      "path": "../../packages/babel-helpers"
-    },
-    {
-      "path": "../../packages/babel-parser"
-    },
-    {
-      "path": "../../packages/babel-template"
-    },
-    {
-      "path": "../../packages/babel-traverse"
-    },
-    {
-      "path": "../../packages/babel-types"
+      "path": "../../packages/babel-helper-validator-identifier"
     }
   ]
 }
