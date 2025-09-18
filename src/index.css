@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+@layer components {
+  .video-player {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+  
+  .video-player video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    padding: 20px 16px 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .video-player:hover .video-controls {
+    opacity: 1;
+  }
+  
+  .progress-bar {
+    height: 4px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    background: #ef4444;
+    transition: width 0.1s ease;
+  }
+  
+  .video-thumbnail {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .video-thumbnail:hover {
+    transform: scale(1.05);
+  }
+}
+
+.upload-area {
+  border: 2px dashed #6b7280;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+  border-color: #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
